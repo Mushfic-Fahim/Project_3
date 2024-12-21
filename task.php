@@ -19,9 +19,9 @@ function saveTasks(array $tasks) : void {
 }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // TODO: Handle task addition (check if task is provided, then add it to the tasks array and save)
+   
     if(isset($_POST['task']) && !empty(trim($_POST['task']))){ 
-        // add a task
+
         $tasks[] = [
             'task' => htmlspecialchars(trim($_POST['task'])),
             'done' => false
@@ -49,7 +49,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 
-<!-- UI -->
 
 <!DOCTYPE html>
 <html lang="en">
